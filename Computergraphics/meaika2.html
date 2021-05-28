@@ -78,7 +78,7 @@
     hiyoko.add(beak);
     hiyoko.add(head);
     hiyoko.add(body);
-    hiyoko.position.set(0,0.01,0);
+    hiyoko.position.set(0,1,0);
     const yunomi=new THREE.Group();
     yunomi.add(cup);
     yunomi.add(sole);
@@ -105,8 +105,8 @@
       requestAnimationFrame(update);
   
       // 回転させる
-        all.rotation.x += 0.01;
-        all.rotation.y += 0.001;
+        all.rotation.x += 0.001;
+        all.rotation.y += 0.01;
   
       renderer.render(scene, camera);
     };

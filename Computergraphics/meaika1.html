@@ -62,7 +62,7 @@
     var tmaterial = new THREE.MeshStandardMaterial( { color: 0xadff2f} );
     
     var cup = new THREE.Mesh( cgeometry, cmaterial );
-    cup.position.set(-1.5,0,-5);
+    cup.position.set(-1.5,1,-5);
     cup.rotation.x=1.7;
     cup.scale.z=5;
     scene.add( cup );
@@ -70,7 +70,7 @@
     sole.position.set(-1.5,-0.5,-5);
     scene.add( sole );
     var tea=new THREE.Mesh( tgeometry, tmaterial)
-    tea.position.set(-1.5,-0.1,-5);
+    tea.position.set(-1.5,-1,-5);
     scene.add(tea);
     
     // 平行光源

@@ -63,7 +63,7 @@
     
     var cup = new THREE.Mesh( cgeometry, cmaterial );
     cup.position.set(-1.5,0,0);
-    cup.rotation.x=1.7;
+    cup.rotation.x=1.75;
     cup.scale.z=5;
     scene.add( cup );
     var sole= new THREE.Mesh( sgeometry, cmaterial );
@@ -105,8 +105,8 @@
       requestAnimationFrame(update);
   
       // 回転させる
-      all.rotation.x+=0.01;
-      all.rotation.y+=0.001;
+      all.rotation.x+=0.001;
+      all.rotation.y+=0.005;
   
       renderer.render(scene, camera);
     };

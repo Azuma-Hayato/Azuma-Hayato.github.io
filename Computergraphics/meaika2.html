@@ -56,8 +56,11 @@
     hiyoko.add(beak);
     hiyoko.add(head);
     hiyoko.add(body);
-    hiyoko.position.set(0,1,0);
-    scene.add(hiyoko);
+    hiyoko.position.set(0,0,0);
+    
+    const all=new THREE.Group();
+    all.add(hiyoko);
+    scene.add(all);
     
     
     // 平行光源
@@ -74,7 +77,7 @@
       requestAnimationFrame(update);
   
       // 回転させる
-        hiyoko.rotation.y += 0.005;;
+        all.rotation.y += 0.005;;
   
       renderer.render(scene, camera);
     };

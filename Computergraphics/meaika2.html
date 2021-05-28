@@ -62,15 +62,15 @@
     var tmaterial = new THREE.MeshStandardMaterial( { color: 0xadff2f} );
     
     var cup = new THREE.Mesh( cgeometry, cmaterial );
-    cup.position.set(-1.5,0,-4);
+    cup.position.set(-1.5,0,0);
     cup.rotation.x=1.7;
     cup.scale.z=5;
     scene.add( cup );
     var sole= new THREE.Mesh( sgeometry, cmaterial );
-    sole.position.set(-1.5,-0.5,-4);
+    sole.position.set(-1.5,-0.5,0);
     scene.add( sole );
     var tea=new THREE.Mesh( tgeometry, tmaterial)
-    tea.position.set(-1.5,-0.1,-4);
+    tea.position.set(-1.5,-0.1,0);
     scene.add(tea);
     
     //オブジェクトのグループ化
@@ -83,7 +83,7 @@
     yunomi.add(cup);
     yunomi.add(sole);
     yunomi.add(tea);
-    yunomi.position.set(0,0,0);
+    yunomi.position.set(-1,0,0);
     
     const all=new THREE.Group();
     all.add(hiyoko);

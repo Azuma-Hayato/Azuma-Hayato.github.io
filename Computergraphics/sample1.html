@@ -25,15 +25,15 @@
     // カメラを作成
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
   
-    // 球を作成
-    var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 );
-    var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: true} )
-    var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-    sphere.position.set( 0, 0, -5 );
-    sphere.scale.x=1.3;
-    sphere.scale.y=0.7;
-    sphere.scale.z=0.8;
-    scene.add(sphere);
+    // 胴体を作成
+    var bodyGeometry = new THREE.SphereGeometry( 0.5, 32, 32 );
+    var bodyMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: true} )
+    var body = new THREE.Mesh( sphereGeometry, sphereMaterial );
+    body.position.set( 0, 0, -5 );
+    body.scale.x=1.3;
+    body.scale.y=0.7;
+    body.scale.z=0.8;
+    scene.add(body);
   
     
     // 平行光源
@@ -50,7 +50,7 @@
       requestAnimationFrame(update);
   
       // 球を回転させる
-      sphere.rotation.y += 0.01;
+      body.rotation.y += 0.01;
   
       renderer.render(scene, camera);
     };

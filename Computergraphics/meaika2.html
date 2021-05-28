@@ -33,10 +33,10 @@
    // 嘴を作成
     var beak = new THREE.Mesh( Geometry, Material );
     beak.position.set( 0.5, 0.5, 0);
-    beak.scale.x=0.5;
+    beak.scale.x=0.4;
     beak.scale.y=0.2;
-    beak.scale.z=0.3;
-    scene.add(beak);
+    beak.scale.z=0.1;
+    beak.rotation.z=0.75;
     
     // 頭部を作成
     var head = new THREE.Mesh( Geometry, Material );
@@ -45,14 +45,12 @@
     head.scale.y=0.75;
     head.scale.z=0.5;
     head.rotation.z=-0.35;
-    scene.add(head);
     
     // 胴体を作成
     var body = new THREE.Mesh( Geometry, Material );
     body.position.set( 0, 0, 0 );
     body.scale.x=1.3;
     body.scale.y=0.7;
-    scene.add(body);
     
      //湯呑を作成
     var cgeometry = new THREE.TorusGeometry( 0.5, 0.1, 30, 100 );
@@ -65,13 +63,10 @@
     cup.position.set(-1.5,0,0);
     cup.rotation.x=1.6;
     cup.scale.z=5;
-    scene.add( cup );
     var sole= new THREE.Mesh( sgeometry, cmaterial );
     sole.position.set(-1.5,-0.5,0);
-    scene.add( sole );
     var tea=new THREE.Mesh( tgeometry, tmaterial)
     tea.position.set(-1.5,-0.1,0);
-    scene.add(tea);
     
     //オブジェクトのグループ化
     const hiyoko=new THREE.Group();

@@ -70,7 +70,7 @@
     scene.add( sole );
     var tea=new THREE.Mesh( tgeometry, tmaterial)
     tea.position.set(-1.5,0,-5);
-    tea.scale.z=0.5;
+    tea.scale.z=4;
     scene.add(tea);
     
     // 平行光源
@@ -90,6 +90,7 @@
       head.rotation.y += 0.01;
       body.rotation.y += 0.01;
       beak.rotation.y += 0.01;
+      cup.rotaion.y+=0.01;
       
       renderer.render(scene, camera);
     };

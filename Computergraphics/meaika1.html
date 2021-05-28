@@ -57,12 +57,12 @@
     //湯呑を作成
     var cgeometry = new THREE.TorusGeometry( 0.5, 0.1, 30, 100 );
     var cmaterial = new THREE.MeshLambertMaterial( { color: 0xff8c00 } );
-    var tgeometry = new THREE.CylinderGeometry( 0.5, 0.1, 30,3 );
+    var tgeometry = new THREE.CylinderGeometry( 0.5, 0.1, 30,0.5 );
     var tmaterial = new THREE.MeshStandardMaterial( { color: 0xadff2f} );
     
     var cup = new THREE.Mesh( cgeometry, cmaterial );
     cup.position.set(-1.5,0,-5);
-    cup.rotation.x=1.5;
+    cup.rotation.x=2;
     cup.scale.z=5;
     scene.add( cup );
     var sole= new THREE.Mesh( tgeometry, cmaterial );

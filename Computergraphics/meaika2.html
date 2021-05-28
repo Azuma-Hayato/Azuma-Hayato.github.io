@@ -57,8 +57,10 @@
     hiyoko.add(head);
     hiyoko.add(body);
     hiyoko.position.set(0,0.1,0);
-    scene.add(hiyoko);
     
+    const all=new THREE.Group();
+    all.add(hiyoko);
+    all.position.set(0,0,-2)
     
     // 平行光源
     var directionalLight = new THREE.DirectionalLight(0xf5f5f5);
@@ -74,7 +76,7 @@
       requestAnimationFrame(update);
   
       // 回転させる
-      hiyoko.rotation.y += 0.005;
+      all.rotation.y += 0.005;
   
       renderer.render(scene, camera);
     };

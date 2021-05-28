@@ -62,7 +62,7 @@
     cup.rotation.x=1.5;
     cup.scale.z=5;
     scene.add( cup );
-    var  sole= new THREE.Mesh( cgeometry, cmaterial );
+    var sole= new THREE.Mesh( cgeometry, cmaterial );
     sole.position.set(-1.5,-0.5,-5);
     sole.rotation.x=1.5;
     scene.add( sole );
@@ -85,7 +85,6 @@
       head.rotation.y += 0.01;
       body.rotation.y += 0.01;
       beak.rotation.y += 0.01;
-      cup.rotation.x+=0.01;
   
       renderer.render(scene, camera);
     };

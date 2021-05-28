@@ -60,7 +60,8 @@
     
     const all=new THREE.Group();
     all.add(hiyoko);
-    all.position.set(0,0,-2)
+    all.position.set(0,0,-2);
+    scene.add(all);
     
     // 平行光源
     var directionalLight = new THREE.DirectionalLight(0xf5f5f5);

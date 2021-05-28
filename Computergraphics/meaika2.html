@@ -56,7 +56,7 @@
     hiyoko.add(beak);
     hiyoko.add(head);
     hiyoko.add(body);
-    hiyoko.position.set(0,0,-1);
+    hiyoko.position.set(0,0,-2);
     scene.add(hiyoko);
     
     
@@ -74,7 +74,7 @@
       requestAnimationFrame(update);
   
       // 回転させる
-      hiyoko.rotation.y += 0.01;
+      hiyoko.rotation.y += 0.005;
   
       renderer.render(scene, camera);
     };

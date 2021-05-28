@@ -57,17 +57,22 @@
     //湯呑を作成
     var cgeometry = new THREE.TorusGeometry( 0.5, 0.1, 30, 100 );
     var cmaterial = new THREE.MeshLambertMaterial( { color: 0xff8c00 } );
+    var tgeometry = new THREE.CylinderGeometry( 0.5, 0.1, 30, 100 );
+    var tmaterial = new THREE.MeshStandardMaterial( { color: 0xadff2f} );
+    
     var cup = new THREE.Mesh( cgeometry, cmaterial );
     cup.position.set(-1.5,0,-5);
     cup.rotation.x=1.5;
     cup.scale.z=5;
     scene.add( cup );
-    var sole= new THREE.Mesh( cgeometry, cmaterial );
+    var sole= new THREE.Mesh( tgeometry, cmaterial );
     sole.position.set(-1.5,-0.5,-5);
     sole.rotation.x=1.5;
     scene.add( sole );
-    
-    
+    var tea=new THREE.Mesh( tgeometry, tmaterial)
+    tea.position.set(-1.5,0,-5);
+    tea.scale.z=4.5;
+    scene.add(tea);
     
     // 平行光源
     var directionalLight = new THREE.DirectionalLight(0xf5f5f5);
@@ -86,7 +91,6 @@
       head.rotation.y += 0.01;
       body.rotation.y += 0.01;
       beak.rotation.y += 0.01;
-      sole.rotation.x+=0.01;
       
       renderer.render(scene, camera);
     };

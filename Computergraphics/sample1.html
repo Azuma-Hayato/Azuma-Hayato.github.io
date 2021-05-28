@@ -32,9 +32,14 @@
     sphere.position.set( 0, 0, -5 );
     scene.add(sphere);
   
+    
+    // 平行光源
+    var directionalLight = new THREE.DirectionalLight(0xffffff);
+    directionalLight.position.set(1, 0, 1);
     // 環境光源を作成
     var light = new THREE.AmbientLight(0xffffff, 2.0);
     // シーンに追加
+    scene.add(directionalLight);
     scene.add(light);
   
     // 初回実行

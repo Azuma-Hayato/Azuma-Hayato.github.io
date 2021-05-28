@@ -28,7 +28,7 @@
     // 胴体を作成
     var bodyGeometry = new THREE.SphereGeometry( 0.5, 32, 32 );
     var bodyMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: true} )
-    var body = new THREE.Mesh( sphereGeometry, sphereMaterial );
+    var body = new THREE.Mesh( bodyGeometry, bodyMaterial );
     body.position.set( 0, 0, -5 );
     body.scale.x=1.3;
     body.scale.y=0.7;

@@ -39,14 +39,14 @@ var textureLoader = new THREE.TextureLoader();
   mat.bumpMap = bump;
   mat.bumpscale = 0.1;
 
-  var geomenty1 = new THREE.BoxGeometry(0.45, 0.55, 0);
+  var geomenty1 = new THREE.BoxGeometry(0.45, 0.55, -2);
   var beak= new THREE.Mesh(geometry1, mat);
     beak.scale.x=0.4;
     beak.scale.y=0.1;
     beak.scale.z=0.2;
     beak.rotation.z=0.75;
 
-  var geometry2 = new THREE.SphereGeometry( 0.4, 0.4, 0); ;
+  var geometry2 = new THREE.SphereGeometry( 0.4, 0.4, -2); ;
   var head = new THREE.Mesh(geometry2, mat);
     head.scale.x=0.5;
     head.scale.y=0.75;
@@ -54,7 +54,7 @@ var textureLoader = new THREE.TextureLoader();
     head.rotation.z=0.35;
 
   // 円柱を作成
-  var geometry3 = new THREE.CylinderGeometry(0, 0, 0 );
+  var geometry3 = new THREE.CylinderGeometry(0, 0, -2);
   var body = new THREE.Mesh(geometry3, mat);
     body.scale.x=1.3;
     body.scale.y=0.7;

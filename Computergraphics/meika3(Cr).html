@@ -47,7 +47,6 @@ var textureLoader = new THREE.TextureLoader();
     beak.scale.y=0.1;
     beak.scale.z=0.2;
     beak.rotation.z=0.75;
-    scene.add(beak);
     
     // 頭部を作成
     var head = new THREE.Mesh( hGeometry, mat );
@@ -56,14 +55,12 @@ var textureLoader = new THREE.TextureLoader();
     head.scale.y=0.75;
     head.scale.z=0.5;
     head.rotation.z=0.35;
-    scene.add(head);
     
     // 胴体を作成
     var body = new THREE.Mesh( hGeometry, mat );
     body.position.set( 0, 0, 0 );
     body.scale.x=1.3;
     body.scale.y=0.7;
-    scene.add(body);
 
     // 平行光源
     var directionalLight = new THREE.DirectionalLight(0xf5f5f5);
@@ -74,14 +71,22 @@ var textureLoader = new THREE.TextureLoader();
     scene.add(directionalLight);
     scene.add(light);
   
+    
+    //オブジェクトのグループ化
+    const hiyoko=new THREE.Group();
+    hiyoko.add(beak);
+    hiyoko.add(head);
+    hiyoko.add(body);
+    hiyoko.position.set(0,0,-4);
+    
     // 初回実行
     var update = function() {
       requestAnimationFrame(update);
   
       // 回転させる
-      head.rotation.y += 0.01;
-      body.rotation.y += 0.01;
-      beak.rotation.y += 0.01;
+      
+      hiyoko.rotation.x+=0.0005;
+      hiyoko.rotation.y+=0.005;
       
       renderer.render(scene, camera);
     };

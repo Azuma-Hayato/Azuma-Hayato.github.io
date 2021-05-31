@@ -37,7 +37,7 @@ var textureLoader = new THREE.TextureLoader();
       // バンプマップ読み込み
   var bump = textureLoader.load("kawaSh.jpg");
   mat.bumpMap = bump;
-  mat.bumpscale = 0.5;
+  mat.bumpscale = 0.05;
 
   // 箱を作成
   var geometry1 = new THREE.BoxGeometry(1, 1, 1);

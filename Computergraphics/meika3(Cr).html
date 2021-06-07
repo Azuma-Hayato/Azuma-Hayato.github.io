@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+  　<title>hiyoko3</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="OrbitControls.js"></script>
     <script>
@@ -13,9 +14,7 @@
         const height = 540;
 
         // レンダラーを作成
-        const renderer = new THREE.WebGLRenderer({
-          canvas: document.querySelector('#myCanvas')
-        });
+        const renderer = new THREE.WebGLRenderer();
         renderer.setSize(width, height);
 
         // シーンを作成
@@ -40,7 +39,7 @@
         // シーンに追加
         scene.add(directionalLight2);
 
-    var Geometry = new THREE.BoxGeometry(300, 300, 300)
+    var Geometry = new THREE.SphereGeometry(300, 300, 300)
     var Material = new THREE. MeshLambertMaterial( {color: 0xf5deb3} ) 
     // 嘴を作成
     var beak = new THREE.Mesh( Geometry, Material );

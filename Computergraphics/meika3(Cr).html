@@ -1,44 +1,47 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>meika</title>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script>
+      // ページの読み込みを待つ
+      window.addEventListener('load', init);
 
-  <!-- three.jsを読み込む(ローカル) -->
-  <!-- <script src="./three.js"></script> -->
-  <!-- three.jsを読み込む(CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
-  <script src="OrbitControls.js"></script>
+      function init() {
+        // サイズを指定
+        const width = 960;
+        const height = 540;
 
-</head>
-<body>
- <script>
-   
-// ページの読み込みを待つ
-  window.addEventListener('load', init);
-  function init() {
+        // レンダラーを作成
+        const renderer = new THREE.WebGLRenderer({
+          canvas: document.querySelector('#myCanvas')
+        });
+        renderer.setSize(width, height);
 
-    const width = 800,
-          height = 600;
+        // シーンを作成
+        const scene = new THREE.Scene();
+
+        // カメラを作成
+        const camera = new THREE.PerspectiveCamera(45, width / height);
+        // カメラの初期座標を設定
+        camera.position.set(0, 0, 1000);
+
+        // カメラコントローラーを作成
+        const controls = new THREE.OrbitControls(camera,document.body);
   
-    // レンダラーを作成
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(width, height);
-  
-    // シーンを作成
-    const scene = new THREE.Scene();
-  
-    // カメラを作成
-  const camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
-
-    // カメラコントローラーを作成
-  const controls = new THREE.OrbitControls(camera,document.body);
+        // 平行光源1
+        var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+        directionalLight1.position.set(100, 100, 100);
+        // シーンに追加
+        scene.add(directionalLight1);
+        // 平行光源2
+        var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+        directionalLight2.position.set(-100, 100, 100);
+        // シーンに追加
+        scene.add(directionalLight2);
 
     var Geometry = new THREE.SphereGeometry( 0.5, 32, 32 );
-    var Material = new THREE. MeshLambertMaterial( {color: 0xf5deb3} )
-    
-    
-   // 嘴を作成
+    var Material = new THREE. MeshLambertMaterial( {color: 0xf5deb3} ) // 嘴を作成
     var beak = new THREE.Mesh( Geometry, Material );
     beak.position.set( 0.45, 0.55, 0);
     beak.scale.x=0.4;
@@ -59,40 +62,28 @@
     body.position.set( 0, 0, 0 );
     body.scale.x=1.3;
     body.scale.y=0.7;
-
-    //オブジェクトのグループ化
+        
+        
     const hiyoko=new THREE.Group();
     hiyoko.add(beak);
     hiyoko.add(head);
     hiyoko.add(body);
-    hiyoko.position.set(0,0,-4);
+    hiyoko.position.set(0,0,0);
     scene.add(hiyoko);
-    
-  // 平行光源
-  var directionalLight1 = new THREE.DirectionalLight(0xffffff);
-  directionalLight1.position.set(1, 1, 1);
-  // シーンに追加
-  scene.add(directionalLight1);
 
-  var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-  directionalLight2.position.set(-10, 1, 1);
-  // シーンに追加
-  scene.add(directionalLight2);
+        tick();
 
- var directionalLight3 = new THREE.DirectionalLight(0xffffff);
-  directionalLight3.position.set(1, -10, 1);
-  // シーンに追加
-  scene.add(directionalLight3);
-    
-  tick();
-  // 毎フレーム時に実行されるループイベントです
-  function tick() {
-     // レンダリング
-     renderer.render(scene, camera);
-     requestAnimationFrame(tick);
-  }
-}
-  window.addEventListener('DOMContentLoaded', init);
-</script>
-</body>
+        // 毎フレーム時に実行されるループイベントです
+        function tick() {
+          // レンダリング
+          renderer.render(scene, camera);
+          requestAnimationFrame(tick);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <canvas id="myCanvas"></canvas>
+  </body>
 </html>

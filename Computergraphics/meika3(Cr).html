@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>meika....?</title>
+  <title>meika</title>
 
   <!-- three.jsを読み込む(ローカル) -->
   <!-- <script src="./three.js"></script> -->
@@ -29,6 +29,8 @@
     // カメラを作成
   var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 
+    // カメラコントローラーを作成
+  const controls = new THREE.OrbitControls(camera,document.body);
 
     var Geometry = new THREE.SphereGeometry( 0.5, 32, 32 );
     var Material = new THREE. MeshLambertMaterial( {color: 0xf5deb3} )

@@ -16,6 +16,7 @@
         // レンダラーを作成
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(width, height);
+        document.body.appendChild(renderer.domElement);
 
         // シーンを作成
         const scene = new THREE.Scene();

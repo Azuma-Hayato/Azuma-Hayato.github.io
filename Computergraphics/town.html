@@ -62,6 +62,7 @@
       mat.bumpscale = 0.1;
       var planeMaterial = new THREE.Mesh();
       var plane = new THREE.Mesh(Geometryr,mat);
+      plane.position.set(0,0,0)
 
         // 木をスプライトで作成 
         var texture = textureLoader.load("tree.png");

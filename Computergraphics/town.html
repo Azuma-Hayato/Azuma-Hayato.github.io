@@ -60,7 +60,6 @@
       var bumpr = textureLoader.load("roadsh.jpg");
       mat.bumpMap = bumpr;
       mat.bumpscale = 0.1;
-      var planeMaterial = new THREE.Mesh();
       var plane = new THREE.Mesh(Geometry,mat);
       plane.position.set(0,0,0)
       scene.add(plane)

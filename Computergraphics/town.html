@@ -54,7 +54,7 @@
         
        // 地面を作成
       var texturer = textureLoader.load("road.jpg");
-      var Geometryr = new THREE.PlaneGeometry(200,200,200,1);
+      var Geometryr = new THREE.PlaneGeometry(200,200,200,10);
       var mat = new THREE.MeshPhongMaterial();
       mat.map = texturer;
       var bumpr = textureLoader.load("roadsh.jpg");

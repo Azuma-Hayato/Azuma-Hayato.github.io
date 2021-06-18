@@ -104,16 +104,6 @@
         sprite6.scale.set(100,100,100);
         scene.add(sprite6);
         
-        //ビルの作成
-        var btexturer = textureLoader.load("window.jpg");
-        var bgeometry = new THREE.BoxGeometry(200,400,50);
-        var mat2 = new THREE.MeshPhongMaterial();
-        mat2.map2 = btexturer;
-        var bunpb = textureLoader.load("windowsh.jpg");
-        mat2.bunpmap = bunpb;
-        mat2.bunpscale = 0.1;
-        var bill = new THREE.Mesh(bgeometry,bmaterial);
-        scene.add(bill);
         
         tick();
         // 毎フレーム時に実行されるループイベントです

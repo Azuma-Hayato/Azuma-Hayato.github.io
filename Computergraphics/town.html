@@ -51,11 +51,11 @@
       scene.add(axisHelper);
         
        // 地面を作成
-      var texturer = textureLoader.load("road.jpg");
+      var texturer = textureLoader.load("road'.jpg");
       var Geometry = new THREE.PlaneGeometry(200,200);
       var mat = new THREE.MeshPhongMaterial();
       mat.map = texturer;
-      var bumpr = textureLoader.load("roadsh.jpg");
+      var bumpr = textureLoader.load("roadsh'.jpg");
       mat.bumpMap = bumpr;
       mat.bumpscale = 0.1;
       var plane = new THREE.Mesh(Geometry,mat);

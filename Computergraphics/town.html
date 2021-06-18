@@ -29,7 +29,7 @@
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
-        camera.position.set(0, 0, 750);
+        camera.position.set(0, 200, 750);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
@@ -52,7 +52,7 @@
       const axisHelper = new THREE.AxisHelper(200,50);
       scene.add(axisHelper);
         
-       // 平面を作成
+       // 地面を作成
       var texturer = textureLoader.load("road.jpg");
       var Geometryr = new THREE.PlaneGeometry(200,200,200,1);
       var mat = new THREE.MeshPhongMaterial();

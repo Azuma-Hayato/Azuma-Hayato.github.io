@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="OrbitControls.js"></script>
-    <title>街1</title>
+    <title>街</title>
     <script>
       // ページの読み込みを待つ
       window.addEventListener('load', init);
@@ -113,7 +113,6 @@
         mat2.bunpmap = bunpb;
         mat2.bunpscale = 0.1;
         var bill = new THREE.Mesh(bgeometry,bmaterial);
-        bill.position.set(400,200,0);
         scene.add(bill);
         
         tick();

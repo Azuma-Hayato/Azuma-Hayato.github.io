@@ -54,7 +54,7 @@
         
        // 地面を作成
       var texturer = textureLoader.load("road.jpg");
-      var Geometry = new THREE.PlaneGeometry(200,200,200,10);
+      var Geometry = new THREE.PlaneGeometry(200,200);
       var mat = new THREE.MeshPhongMaterial();
       mat.map = texturer;
       var bumpr = textureLoader.load("roadsh.jpg");
@@ -63,6 +63,7 @@
       var planeMaterial = new THREE.Mesh();
       var plane = new THREE.Mesh(Geometry,mat);
       plane.position.set(0,0,0)
+      scene.add(plane)
 
         // 木をスプライトで作成 
         var texture = textureLoader.load("tree.png");

@@ -35,6 +35,7 @@
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
         controls.maxPolarAngle = Math.PI/2;
+        controls.minPolarAngle = Math.PI/10;
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);

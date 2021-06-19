@@ -30,7 +30,7 @@
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
-        camera.position.set(-80, 75, -130);
+        camera.position.set(-80,45, -130);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
@@ -106,6 +106,7 @@
         
         
         //ビルの作成
+        var btexture = textureLoader.load("window.jpg");
         var bgeometry = new THREE.BoxGeometry(50,400,200);
         var bmaterial =  new THREE. MeshLambertMaterial( {color: 0xf5deb3} );
         var mat2 = new THREE.MeshPhongMaterial(); 

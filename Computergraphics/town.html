@@ -30,7 +30,7 @@
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
-        camera.position.set(-80, 150, 130);
+        camera.position.set(-80, 75, -130);
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
@@ -110,7 +110,7 @@
         var bmaterial =  new THREE. MeshLambertMaterial( {color: 0xf5deb3} );
         var mat2 = new THREE.MeshPhongMaterial(); 
         var bill = new THREE.Mesh(bgeometry,bmaterial);
-        bill.position.set(200,200,0)
+        bill.position.set(200,200,47)
         scene.add(bill);
         
         tick();

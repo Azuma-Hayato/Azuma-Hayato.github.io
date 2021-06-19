@@ -110,6 +110,9 @@
         var bgeometry = new THREE.BoxGeometry(50,400,200);
         var mat2 = new THREE.MeshPhongMaterial();
         mat2.map = btexture;
+        var bbump = textureLoader.load("windowsh'.jpg");
+        mat2.bumpMap = bbump;
+        mat2.bumpscale = 0.5;
         var bill = new THREE.Mesh(bgeometry,mat2);
         bill.position.set(200,200,47)
         scene.add(bill);

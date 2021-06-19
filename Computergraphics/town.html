@@ -108,6 +108,8 @@
         //ビルの作成
         var btexture = textureLoader.load("window.jpg");
         var bgeometry = new THREE.BoxGeometry(50,400,200);
+        var bmat = new THREE.MeshPhongMaterial();
+        bmat.map = rtexturer;
         var bmaterial =  new THREE. MeshLambertMaterial( {color: 0xf5deb3} );
         var mat2 = new THREE.MeshPhongMaterial(); 
         var bill = new THREE.Mesh(bgeometry,bmaterial);

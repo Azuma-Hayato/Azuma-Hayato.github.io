@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="OrbitControls.js"></script>
-    <title>街0</title>
+    <title>街</title>
     <script>
       // ページの読み込みを待つ
       window.addEventListener('load', init);
@@ -112,7 +112,7 @@
         mat2.map = btexture;
         var bbump = textureLoader.load("windowsh'.jpg");
         mat2.bumpMap = bbump;
-        mat2.bumpscale = 0.5;
+        mat2.bumpscale = 3;
         var bill = new THREE.Mesh(bgeometry,mat2);
         bill.position.set(200,150,47)
         scene.add(bill);

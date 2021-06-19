@@ -60,9 +60,9 @@
       mat.bumpMap = bumpr;
       mat.bumpscale = 0.1;
       var plane = new THREE.Mesh(rGeometry,mat);
-      plane.position.set(0,0,0)
+      plane.position.set(0,0,0);
       plane.rotation.set( -Math.PI/2, 0, 0 );
-      scene.add(plane)
+      scene.add(plane);
 
         // 木をスプライトで作成 
         var texture = textureLoader.load("tree.png");
@@ -106,10 +106,11 @@
         
         
         //ビルの作成
-        var bgeometry = new THREE.BoxGeometry(200,400,50);
+        var bgeometry = new THREE.BoxGeometry(50,400,200);
         var bmaterial =  new THREE. MeshLambertMaterial( {color: 0xf5deb3} );
         var mat2 = new THREE.MeshPhongMaterial(); 
         var bill = new THREE.Mesh(bgeometry,bmaterial);
+        bill.position.set(300,200,0)
         scene.add(bill);
         
         tick();

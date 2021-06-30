@@ -131,15 +131,18 @@
                 
         //ガードの作成
         var gtexture = textureLoader.load("conkuri.jpg");
-        var ggeometry = new THREE.BoxGeometry(10,5,400);
+        var ggeometry = new THREE.BoxGeometry(5,5,400);
         var mat3 = new THREE.MeshPhongMaterial();
         mat3.map = gtexture;
         var gbump = textureLoader.load("conkurish'.jpg");
         mat3.bumpMap = gbump;
         mat3.bumpscale = 3;
-        var guard = new THREE.Mesh(ggeometry,mat3);
-        guard.position.set(100,2.5,0)
-        scene.add(guard);
+        var guard1 = new THREE.Mesh(ggeometry,mat3);
+        guard1.position.set(100,2.5,0)
+        scene.add(guard1);
+        var guard2 = new THREE.Mesh(ggeometry,mat3);
+        guard2.position.set(-100,2.5,0)
+        scene.add(guard2);
         
         tick();
         // 毎フレーム時に実行されるループイベントです

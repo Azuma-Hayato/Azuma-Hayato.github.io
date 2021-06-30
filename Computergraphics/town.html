@@ -131,14 +131,14 @@
                 
         //ガードの作成
         var gtexture = textureLoader.load("conkuri.jpg");
-        var ggeometry = new THREE.BoxGeometry(10,10,200);
+        var ggeometry = new THREE.BoxGeometry(10,5,400);
         var mat3 = new THREE.MeshPhongMaterial();
         mat3.map = gtexture;
         var gbump = textureLoader.load("conkurish'.jpg");
         mat3.bumpMap = gbump;
         mat3.bumpscale = 3;
-        var guard = new THREE.Mesh(ggeometry,mat2);
-        guard.position.set(100,5,0)
+        var guard = new THREE.Mesh(ggeometry,mat3);
+        guard.position.set(100,2.5,0)
         scene.add(guard);
         
         tick();

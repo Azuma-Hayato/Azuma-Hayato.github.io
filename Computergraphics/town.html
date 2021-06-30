@@ -115,8 +115,7 @@
         sprite7.position.z = 55;
         sprite7.scale.set(50,50,50);
         scene.add(sprite7);
-        
-        
+
         //ビルの作成
         var btexture = textureLoader.load("window.jpg");
         var bgeometry = new THREE.BoxGeometry(50,300,200);
@@ -128,6 +127,19 @@
         var bill = new THREE.Mesh(bgeometry,mat2);
         bill.position.set(200,150,47)
         scene.add(bill);
+        
+                
+        //ガードの作成
+        var gtexture = textureLoader.load("conkuri.jpg");
+        var ggeometry = new THREE.BoxGeometry(200,5,5);
+        var mat3 = new THREE.MeshPhongMaterial();
+        mat3.map = gtexture;
+        var gbump = textureLoader.load("conkurish'.jpg");
+        mat3.bumpMap = gbump;
+        mat3.bumpscale = 3;
+        var guard = new THREE.Mesh(bgeometry,mat2);
+        guard.position.set(200,150,47)
+        scene.add(guard);
         
         tick();
         // 毎フレーム時に実行されるループイベントです
